@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rodge — Portfolio</title>
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#top" class="nav-mark">R.A.</a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#about" data-nav>About</a>
+      <a href="#projects" data-nav>Projects</a>
+      <a href="#skills" data-nav>Skills</a>
+      <a href="#contact" data-nav>Contact</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="top">
+    <div class="container hero-grid">
+      <p class="eyebrow reveal">Student · Computer Science, B.S. 2027</p>
+      <h1 class="hero-title reveal">
+        Hi, I&rsquo;m Rodge Amir San Jose.<br>
+        I build things that work,<br>
+        and try to make them worth using.
+      </h1>
+      <p class="hero-status reveal">
+        <span class="status-dot" aria-hidden="true"></span>
+        Right now: <span id="statusText">building a course scheduler app</span>
+      </p>
+      <div class="hero-actions reveal">
+        <a href="#projects" class="btn btn-primary">See my work</a>
+        <a href="#contact" class="btn btn-ghost">Get in touch</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="about" id="about">
+    <div class="container about-grid">
+      <div class="reveal">
+        <img src="6057849190177509036.jpg" alt="Rodge San Jose" class="profile-photo">
+        <p class="section-label">About</p>
+        <h2 class="section-title">A little about my path so far.</h2>
+        <p class="about-text">
+          I'm a junior studying Computer Science, mostly interested in the space where
+          software meets everyday problems &mdash; scheduling, small tools, and interfaces
+          that don't make people think too hard. Outside of class I TA an intro programming
+          course and spend a lot of evenings breaking things in side projects, then figuring
+          out why.
+        </p>
+      </div>
+      <dl class="facts reveal">
+        <div class="fact">
+          <dt>Education</dt>
+          <dd>B.S. Computer Science, Cavite State University- Silang &mdash; Class of 2026-2027</dd>
+        </div>
+        <div class="fact">
+          <dt>Based in</dt>
+          <dd>Cavite, Philippines</dd>
+        </div>
+        <div class="fact">
+          <dt>Focus areas</dt>
+          <dd>Web development, human&ndash;computer interaction, a little bit of data</dd>
+        </div>
+        <div class="fact">
+          <dt>School Year</dt>
+          <dd>3rd year</dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS ============ -->
+  <section class="projects" id="projects">
+    <div class="container">
+      <p class="section-label reveal">Projects</p>
+      <h2 class="section-title reveal">Things I've built for class, and for myself.</h2>
+
+      <div class="filters reveal" id="filters">
+        <button class="filter-btn is-active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="web">Quiz</button>
+        <button class="filter-btn" data-filter="data">Midterm Exam</button>
+        <button class="filter-btn" data-filter="mobile">Final Exam</button>
+        <button class="filter-btn" data-filter="tool">Tool</button>
+      </div>
+
+      <div class="project-grid" id="projectGrid">
+
+        <article class="project-card reveal" data-category="web">
+          <img src="images/courseflow.jpg" alt="Quiz screenshot" class="project-thumb">
+          <p class="project-code">PRJ&nbsp;/&nbsp;01</p>
+          <h3>Quiz</h3>
+          <p class="project-desc">Quiz Score.</p>
+          <ul class="project-stack">          
+          </ul>
+          <div class="project-links">
+            <a href="#" class="text-link">Home</a>          
+          </div>
+        </article>
+        <article class="project-card reveal" data-category="data">
+          <img src="images/dining-trends.jpg" alt="Midterm Exam" class="project-thumb">
+          <p class="project-code">PRJ&nbsp;/&nbsp;02</p>
+          <h3>Midterm Exam</h3>
+          <p class="project-desc">Midterm Score</p>
+          <ul class="project-stack">          
+          </ul>
+          <div class="project-links">
+            <a href="#" class="text-link">Home</a>          
+          </div>
+        </article>
+        <article class="project-card reveal" data-category="mobile">
+          <img src="images/studybuddy.jpg" alt="Final Exam" class="project-thumb">
+          <p class="project-code">PRJ&nbsp;/&nbsp;03</p>
+          <h3>Final Exam</h3>
+          <p class="project-desc">Final Score</p>
+          <ul class="project-stack">          
+          </ul>
+          <div class="project-links">
+            <a href="#" class="text-link">Home</a>  
+          </div>
+        </article>
+        <article class="project-card reveal" data-category="tool">
+          <img src="images/gitpad.jpg" alt="Activity screenshot" class="project-thumb">
+          <p class="project-code">PRJ&nbsp;/&nbsp;04</p>
+          <h3>Activity</h3>
+          <p class="project-desc">Activity Score</p>
+          <ul class="project-stack">           
+          </ul>
+          <div class="project-links">
+            <a href="#" class="text-link">Home</a>
+          </div>
+        </article>
+        <article class="project-card reveal" data-category="web">
+          <img src="images/office-hours.jpg" alt="Quiz screenshot" class="project-thumb">
+          <p class="project-code">PRJ&nbsp;/&nbsp;05</p>
+          <h3>Quiz</h3>
+          <p class="project-desc">Quiz Score</p>
+          <ul class="project-stack">           
+          </ul>
+          <div class="project-links">
+            <a href="#" class="text-link">Home</a>
+          </div>
+        </article>
+        <article class="project-card reveal" data-category="data">
+          <img src="images/bus-predictor.jpg" alt="Midterm Exam" class="project-thumb">
+          <p class="project-code">PRJ&nbsp;/&nbsp;06</p>
+          <h3>Midterm Exam</h3>
+          <p class="project-desc">Midterm Score.</p>
+          <ul class="project-stack">
+          </ul>
+          <div class="project-links">
+            <a href="#" class="text-link">Home</a>
+          </div>
+        </article>
+
+      </div>
+
+      <p class="empty-state" id="emptyState" hidden>Nothing here yet in this category &mdash; check back soon.</p>
+    </div>
+  </section>
+
+  <!-- ============ SKILLS ============ -->
+  <section class="skills" id="skills">
+    <div class="container">
+      <p class="section-label reveal">Skills</p>
+      <h2 class="section-title reveal">What I work with.</h2>
+
+      <div class="skills-grid">
+        <div class="skill-group reveal">
+          <p class="skill-label">Languages</p>
+          <div class="chips">
+            <span class="chip">Python</span>
+            <span class="chip">JavaScript</span>
+            <span class="chip">Java</span>
+            <span class="chip">SQL</span>
+          </div>
+        </div>
+        <div class="skill-group reveal">
+          <p class="skill-label">Frameworks &amp; tools</p>
+          <div class="chips">
+            <span class="chip">Node.js</span>
+            <span class="chip">Git</span>
+            <span class="chip">Figma</span>
+          </div>
+        </div>
+        <div class="skill-group reveal">
+          <p class="skill-label">Currently learning</p>
+          <div class="chips">
+            <span class="chip chip-learning">Systems design</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="contact" id="contact">
+    <div class="container contact-inner reveal">
+      <p class="section-label">Contact</p>
+      <h2 class="contact-title">Have a project, a role,<br>or just a question? Let&rsquo;s talk.</h2>
+      <a href="mailto:sanjoserodge@gmail.com" class="contact-email">sanjoserodge@gmail.com</a>
+      <div class="socials">
+        <a href="https://www.facebook.com/" aria-label="Facebook" class="Facebook">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M22.675 0h-21.35C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24h11.495v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.323-.593 1.323-1.325V1.325C24 .593 23.407 0 22.675 0z"/></svg>
+</a>
+        <a href="https://www.instagram.com/" aria-label="Instagram" class="Instagram">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <p>&copy; <span id="year"></span> Rodge San Jose. Built with HTML, CSS &amp; JavaScript.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
