@@ -112,3 +112,25 @@ filterButtons.forEach((btn) => {
 // Footer year
 // ===========================================================
 document.getElementById('year').textContent = new Date().getFullYear();
+// Click a project picture to view it full size
+const lightbox = document.createElement('div');
+lightbox.className = 'lightbox';
+lightbox.innerHTML = '<img alt="">';
+document.body.appendChild(lightbox);
+const lightboxImg = lightbox.querySelector('img');
+
+document.querySelectorAll('.project-thumb').forEach(function (img) {
+  img.addEventListener('click', function () {
+    lightboxImg.src = img.src;
+    lightboxImg.alt = img.alt;
+    lightbox.classList.add('open');
+  });
+});
+
+lightbox.addEventListener('click', function () {
+  lightbox.classList.remove('open');
+});
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') lightbox.classList.remove('open');
+});
